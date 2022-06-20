@@ -1,5 +1,3 @@
-import { OSSConfig } from '@cool-midway/core';
-import { MODETYPE, CoolFileConfig } from '@cool-midway/file';
 import { MidwayConfig } from '@midwayjs/core';
 import * as redisStore from 'cache-manager-ioredis';
 import { uploadWhiteList } from '@midwayjs/upload';
@@ -90,20 +88,6 @@ export default {
       SecretId: '',
       SecretKey: '',
     },
-  },
-  // cool配置
-  cool: {
-    file: {
-      // 上传模式 本地上传或云存储
-      mode: MODETYPE.CLOUD,
-      oss: {
-        accessKeyId: '',
-        accessKeySecret: '',
-        bucket: '',
-        endpoint: '',
-        timeout: '3600s',
-      } as OSSConfig,
-    } as CoolFileConfig,
   },
 } as
   | MidwayConfig
